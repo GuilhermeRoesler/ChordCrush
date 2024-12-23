@@ -1,0 +1,468 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    background-attachment: fixed;
+    background-size: 100%;
+    font-family: 'Gill Sans';
+    transition: all 0.5s ease;
+}
+
+button {
+    display: flex;
+    height: 50px;
+    width: 200px;
+    background: linear-gradient(45deg, rgba(254,222,101,1) 0%, rgba(241,174,94,1) 100%);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    color: #261414;
+    font-family: 'comic-sans';
+    font-size: 18px;
+    transition: all .2s linear;
+    outline: none;
+}
+
+footer {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 150px;
+    align-items: center;
+    bottom: 0;
+}
+
+#container-1 {
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: all .7s linear;
+}
+
+#container-1 footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+}
+
+#container-1 footer button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 20px 0px 0px 40px;
+}
+
+#container-1 footer button div {
+    background: url("img/config.png") no-repeat center;
+    background-size: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ffa85f;
+}
+
+#container-2 {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    transition: all .7s linear;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ffeda8 0%, #f2c38e 100%);
+}
+
+#container-2 header {
+    display: flex;
+    position: absolute;
+    top: 0;
+    height: 150px;
+    width: 100%;
+    padding: 10px;
+}
+
+#container-2 header h4 {
+    color: #ffffffe8;
+    margin: 20px;
+    font-size: 20px;
+}
+
+#container-2 header div {
+    display: flex;
+    height: 100px;
+    width: 400px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#container-2 header div img {
+    height: 75px;
+}
+
+#container-2 div {
+    display: flex;
+}
+
+#repeat {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+#repeat div {
+    background: url("img/speaker.png") no-repeat center;
+    background-size: 25px;
+    height: 100px;
+    width: 100px;
+}
+
+#listen {
+    margin-bottom: 175px;
+}
+
+#verify {
+    margin-top: 175px;
+}
+
+.progresion {
+    display: flex;
+    width: 300px;
+    height: 150px;
+    border: 2px white outset;
+    margin: 25px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.progresion h4 {
+    display: flex;
+    height: 100px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    font-weight: 100;
+    color: white;
+}
+
+.progresion input {
+    display: flex;
+    height: 100px;
+    width: 120px;
+    background-color: transparent;
+    border: none;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    font-weight: 100;
+    color: white;
+    outline: none;
+}
+
+.back-button {
+    margin-left: 40px;
+    width: 100px;
+}
+
+.back-button:hover {
+    width: 120px;
+}
+
+.back-button div {
+    background: url("img/back.png") no-repeat center;
+    background-size: 40px;
+    height: 100px;
+    width: 100px;
+}
+
+#bonusInput {
+    position: absolute;
+    display: flex;
+    height: 150px;
+    width: 100px;
+    background: transparent;
+    border-radius: 10px;
+    border-color: orange;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    font-weight: 100;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    outline: none;
+    right: 300px;
+    bottom: 150px;
+}
+
+#container-config {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    transition: all .7s linear;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-config header {
+    display: flex;
+    position: absolute;
+    top: 0;
+    height: 100px;
+    width: 100%;
+}
+
+#container-config header div {
+    display: flex;
+    align-items: center;
+    width: 50vw;
+    height: 100%;
+    padding-left: 30px;
+}
+
+#container-config header div h4 {
+    color: #ffffffe8;
+    font-size: 20px;
+}
+
+#container-config header div:first-child h4 {
+    cursor: pointer;
+}
+
+#level-div h4 {
+    margin-left: 770px;
+}
+
+#config-div {
+    display: flex;
+    height: 90%;
+    width: 40%;
+    border: orange 3px solid;
+    border-radius: 20px;
+    color: #ffffffe8;
+    padding: 40px;
+    flex-direction: column;
+}
+
+#config-div-cima {
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    width: 100%;
+}
+
+#config-div-cima div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#config-div-cima h4, #config-div-3 h4 {
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+#config-div-3 {
+    display: flex;
+    height: 20%;
+    width: 100%;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#config-div-2 {
+    align-items: end;
+    padding-right: 10px;
+}
+
+#config-div-2 h4 {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#container-game-over {
+    position: absolute;
+    display: none;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+}
+
+#container-game-over h1 {
+    color: red;
+    font-size: 100px;
+    text-shadow: #121212 10px 10px 1px;
+    transform: rotate(-5deg);
+    animation: game-over-animation 2s ease-in-out infinite alternate;
+    cursor: pointer;
+}
+
+#container-username {
+    display: none;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+}
+
+.username-div {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 600px;
+    width: 400px;
+    border-radius: 20px;
+    border: orange 4px outset;
+    background-color: #121212;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    font-weight: 100;
+    color: white;
+}
+
+.cabecario-username {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+    font-size: 30px;
+}
+
+.body-username {
+    display: flex;
+    flex-direction: column;
+    height: 65%;
+    width: 100%;
+}
+
+.body-username label {
+    margin-top: 40px;
+}
+
+.body-username input {
+    height: 40px;
+    width: 250px;
+    margin-top: 10px;
+    background-color: transparent;
+    border: #ffffffb9 outset 2px;
+    font-size: 15px;
+    padding-left: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
+    color: #ffffffe8;
+    outline: none;
+}
+
+.body-username p {
+    margin-top: 20px;
+    font-size: 15px;
+    text-decoration: underline;
+    cursor: pointer;
+    color: rgb(103, 174, 255);
+}
+
+.footer-username {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    height: 20%;
+    width: 100%;
+}
+
+#footer-username button:hover {
+    font-size: 20px;
+}
+
+#cadastro-div {
+    display: none;
+    height: 600px;
+    width: 400px;
+    border-radius: 20px;
+    border: orange 4px outset;
+    background-color: #121212;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    font-weight: 100;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes game-over-animation {
+    from {
+        transform: rotate(-1deg);
+        transform: scale(1.1);
+    }
+}
+
+@font-face {
+    font-family: 'comic-sans';
+    src: url(fonts/comicbd.ttf);
+}

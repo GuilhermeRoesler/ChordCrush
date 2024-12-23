@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ChordCrush.css">
+    <title>ChordCrush</title>
+</head>
+<body background="img/background.png">
+
+    <div id="container-1">
+        <button id="playButton" onclick="play()">PLAY</button>
+
+        <footer>
+            <button onclick="config()"><div></div></button>
+        </footer>
+    </div>
+    
+    <div id="container-2">
+
+        <header>
+            <h4>Points: 0</h4>
+            <div id="heart-div">
+                <img src="img/heart.png" alt="heart" class="heart">
+                <img src="img/heart.png" alt="heart" class="heart">
+                <img src="img/heart.png" alt="heart" class="heart">
+                <img src="img/heart.png" alt="heart" class="heart">
+                <img src="img/heart.png" alt="heart" class="heart">
+            </div>
+        </header>
+
+        <div>
+            <button id="listen" onclick="listen()">LISTEN</button>
+            <button id="repeat" onclick="repeat()"><div></div></button>
+        </div>
+
+
+        <div>
+            <div class="progresion"><h4 id="h4-1">I</h4></div>
+            <div class="progresion"><input type="text" placeholder="?"></div>
+            <div class="progresion"><input type="text" placeholder="?"></div>
+            <div class="progresion"><input type="text" placeholder="?"></div>
+        </div>
+
+        <button id="verify" onclick="verify()">VERIFY</button>
+
+        <footer>
+            
+            <button class="back-button" onclick="back()"><div></div></button>
+
+            <input type="text" placeholder="bônus" id="bonusInput">
+            
+        </footer>
+
+
+        <audio id="Chord"><source src="music/C1.mp3" type="audio/mpeg"></audio>
+
+    </div>
+
+    <div id="container-config">
+
+        <header>
+            <div><h4 onclick="loadLogin()">Username: SôuLs</h4></div>
+            <div id="level-div"><h4>Level: 0</h4></div>
+            
+            
+        </header>
+
+        <div id="config-div">
+            <div id="config-div-cima">
+                <div id="config-div-1">
+                    <h4>DIFICULDADE:</h4>
+                    <h4>CORAÇÕES</h4>
+                </div>
+
+                <div id="config-div-2">
+                    <h4 id="problema">MEDIUM</h4>
+                    <h4>ON</h4>
+                    
+                </div>
+            </div>
+            <div id="config-div-3">
+                <h4>Total Points: 0</h4>
+                <h4>max Points: 0</h4>
+            </div>
+        </div>
+
+        <footer>
+            <button class="back-button" onclick="back()"><div></div></button>
+        </footer>
+
+    </div>
+
+    <div id="container-game-over">
+        <h1>GAME OVER</h1>
+    </div>
+
+    <div id="container-username">
+        <div class="username-div" id="username-div-login">
+            <div class="cabecario-username"><h3>Login</h3></div>
+            
+            <div class="body-username">
+                <label for="">Username: <input type="text" placeholder="User123"></label>
+                <label for="">Password: <input type="text" placeholder="********"></label>
+                <p onclick="loadCadastro()">Don't have an account?</p>
+            </div>
+
+            <div class="footer-username">
+                <button onclick="addUsername()">Send</button>
+            </div>
+        </div>
+        <div class="username-div" id="username-div-cadastro">
+            <div class="cabecario-username"><h3>Cadastro</h3></div>
+
+            <div class="body-username">
+                <label for="">Username: <input type="text" placeholder="User123"></label>
+                <label for="">Password: <input type="text" placeholder="********"></label>
+                <p onclick="loadLogin()">Already have an account?</p>
+            </div>
+
+            <div class="footer-username">
+                <button onclick="addUsername()">Send</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="ChordCrush.js"></script>
+</body>
+</html>
